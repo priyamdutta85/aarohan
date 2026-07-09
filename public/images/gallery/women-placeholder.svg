@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultural placeholder for Women of Aarohan</title>
+  <desc id="desc">A non-photographic respectful motif for women in leadership and community-building.</desc>
+  <rect width="1200" height="800" fill="#fffdf7"/>
+  <path d="M285 575 C370 430 475 360 600 360 C725 360 830 430 915 575 L850 690 H350 Z" fill="#9f1f24"/>
+  <circle cx="600" cy="255" r="112" fill="#d79a2b"/>
+  <path d="M455 245 C512 165 688 165 745 245 C695 235 505 235 455 245Z" fill="#24584a"/>
+  <g fill="none" stroke="#b65735" stroke-width="12" stroke-linecap="round">
+    <path d="M250 210 C330 120 420 115 500 200"/>
+    <path d="M700 200 C780 115 870 120 950 210"/>
+    <path d="M280 325 C390 300 460 310 535 365"/>
+    <path d="M665 365 C740 310 810 300 920 325"/>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+import type { LinkItem } from "@/types/content";
+
+export const site = {
+  name: "Aarohan Cultural Society",
+  bengaliName: "আরোহণ",
+  tagline: "সংস্কৃতি • সম্প্রীতি • সমাজ",
+  location: "Hyderabad, Telangana, India",
+  registration: "Registration No. 353 of 2024",
+  description:
+    "Discover Aarohan Cultural Society, a vibrant Hyderabad community celebrating Bengali culture, music, literature, festivals, social impact and togetherness.",
+  hero: {
+    headline: "Rooted in Bengal. Rising Together.",
+    dek: "A vibrant cultural home in Hyderabad — celebrating heritage, creativity, community and the timeless spirit of Bengal.",
+    primaryCta: { label: "Discover Aarohan", href: "/about" },
+    secondaryCta: { label: "Explore Our Journey", href: "/events" },
+  },
+} as const;
+
+export const navItems: LinkItem[] = [
+  { label: "About", href: "/about" },
+  { label: "Culture", href: "/culture" },
+  { label: "Events", href: "/events" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Membership", href: "/membership" },
+  { label: "Join", href: "/join" },
+  { label: "Social Impact", href: "/social-impact" },
+  { label: "Contact", href: "/contact" },
+  { label: "Leadership", href: "/leadership" },
+];
+
+export const footerLinks: LinkItem[] = [
+  ...navItems,
+  { label: "Durgotsab 2025 Archive", href: "/events/durgotsab-2025" },
+  { label: "Privacy", href: "/privacy" },
+];

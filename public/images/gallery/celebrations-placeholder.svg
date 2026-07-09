@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultural placeholder for celebrations</title>
+  <desc id="desc">A non-photographic celebration motif with shiuli-like flowers and flowing festival lines.</desc>
+  <rect width="1200" height="800" fill="#fff8ed"/>
+  <path d="M0 420 C175 270 340 565 515 390 S840 230 1200 435 V800 H0 Z" fill="#b65735" opacity=".95"/>
+  <path d="M0 505 C190 385 360 650 545 475 S860 355 1200 535 V800 H0 Z" fill="#9f1f24"/>
+  <g fill="#fffdf7">
+    <path d="M360 220 C390 160 450 160 480 220 C450 280 390 280 360 220Z"/>
+    <path d="M720 225 C750 165 810 165 840 225 C810 285 750 285 720 225Z"/>
+    <path d="M535 155 C565 95 625 95 655 155 C625 215 565 215 535 155Z"/>
+  </g>
+  <g fill="#d79a2b">
+    <circle cx="420" cy="220" r="18"/>
+    <circle cx="780" cy="225" r="18"/>
+    <circle cx="595" cy="155" r="18"/>
+  </g>
+</svg>

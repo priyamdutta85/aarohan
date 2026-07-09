@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultural placeholder for festivals</title>
+  <desc id="desc">A non-photographic Bengali cultural pattern in ivory, sindoor red, terracotta and marigold.</desc>
+  <rect width="1200" height="800" fill="#fff8ed"/>
+  <path d="M0 590 C180 500 270 710 450 610 S760 460 940 570 1120 680 1200 610 L1200 800 L0 800 Z" fill="#9f1f24" opacity=".9"/>
+  <circle cx="600" cy="330" r="178" fill="none" stroke="#b65735" stroke-width="18"/>
+  <circle cx="600" cy="330" r="114" fill="none" stroke="#d79a2b" stroke-width="10" stroke-dasharray="18 20"/>
+  <path d="M600 115 C660 190 730 244 820 270 C730 296 660 350 600 425 C540 350 470 296 380 270 C470 244 540 190 600 115Z" fill="#24584a" opacity=".86"/>
+  <g fill="#d79a2b">
+    <circle cx="185" cy="175" r="26"/>
+    <circle cx="1015" cy="170" r="26"/>
+    <circle cx="245" cy="270" r="15"/>
+    <circle cx="950" cy="292" r="15"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultural placeholder for performances</title>
+  <desc id="desc">A non-photographic abstract performance scene with rhythm lines and stage-like forms.</desc>
+  <rect width="1200" height="800" fill="#fffdf7"/>
+  <rect x="92" y="92" width="1016" height="616" rx="32" fill="#24211f"/>
+  <path d="M170 560 C300 365 450 655 600 450 S875 330 1030 555" fill="none" stroke="#d79a2b" stroke-width="24" stroke-linecap="round"/>
+  <path d="M220 250 C330 190 405 190 500 250 M700 250 C800 190 885 190 980 250" fill="none" stroke="#fff8ed" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="600" cy="318" r="82" fill="#9f1f24"/>
+  <path d="M568 285 L655 318 L568 351 Z" fill="#fff8ed"/>
+  <g stroke="#b65735" stroke-width="10" stroke-linecap="round">
+    <path d="M330 455 L330 320"/>
+    <path d="M374 455 L374 352"/>
+    <path d="M826 455 L826 320"/>
+    <path d="M870 455 L870 352"/>
+  </g>
+</svg>

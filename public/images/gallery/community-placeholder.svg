@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultural placeholder for community</title>
+  <desc id="desc">A non-photographic community motif using connected circles and Bengali-inspired ornament.</desc>
+  <rect width="1200" height="800" fill="#fbefe2"/>
+  <path d="M0 0 H1200 V800 H0 Z" fill="#fff8ed"/>
+  <g fill="#9f1f24" opacity=".95">
+    <circle cx="390" cy="330" r="88"/>
+    <circle cx="600" cy="292" r="108"/>
+    <circle cx="810" cy="330" r="88"/>
+  </g>
+  <g fill="#24584a">
+    <circle cx="468" cy="515" r="76"/>
+    <circle cx="732" cy="515" r="76"/>
+  </g>
+  <g fill="none" stroke="#d79a2b" stroke-width="12">
+    <path d="M230 205 C360 110 480 112 600 210 C720 112 840 110 970 205"/>
+    <path d="M230 620 C360 710 480 704 600 615 C720 704 840 710 970 620"/>
+  </g>
+  <circle cx="600" cy="410" r="285" fill="none" stroke="#b65735" stroke-width="8" stroke-dasharray="20 20"/>
+</svg>

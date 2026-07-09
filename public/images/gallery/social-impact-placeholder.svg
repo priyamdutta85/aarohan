@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultural placeholder for social impact</title>
+  <desc id="desc">A non-photographic social impact motif with hands, leaves and a warm community palette.</desc>
+  <rect width="1200" height="800" fill="#fff8ed"/>
+  <path d="M225 570 C325 470 440 455 535 530 L600 585 L665 530 C760 455 875 470 975 570 L910 655 C800 585 720 630 600 710 C480 630 400 585 290 655 Z" fill="#24584a"/>
+  <path d="M600 148 C720 245 780 362 780 505 C660 470 540 470 420 505 C420 362 480 245 600 148Z" fill="#9f1f24" opacity=".92"/>
+  <path d="M600 215 C650 285 690 355 700 430 C635 412 565 412 500 430 C510 355 550 285 600 215Z" fill="#d79a2b"/>
+  <g fill="#b65735" opacity=".28">
+    <circle cx="178" cy="178" r="52"/>
+    <circle cx="1022" cy="178" r="52"/>
+    <circle cx="180" cy="640" r="38"/>
+    <circle cx="1020" cy="640" r="38"/>
+  </g>
+</svg>

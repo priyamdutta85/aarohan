@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  --parchment: #fff8ed;
+  --ivory: #fffdf7;
+  --sindoor: #9f1f24;
+  --sindoor-dark: #6e171b;
+  --terracotta: #b65735;
+  --marigold: #d79a2b;
+  --charcoal: #24211f;
+  --ink-muted: #665c53;
+  --deep-green: #24584a;
+  --line: #ead8c4;
+  --shadow: 0 24px 80px rgb(70 33 19 / 14%);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--parchment);
+}
+
+body {
+  margin: 0;
+  color: var(--charcoal);
+  background:
+    radial-gradient(circle at top left, rgb(215 154 43 / 12%), transparent 36rem),
+    linear-gradient(180deg, var(--parchment), var(--ivory) 38%, #fbefe2);
+  font-family: var(--font-body), system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  color: var(--ivory);
+  background: var(--sindoor);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--deep-green);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 999px;
+  background: var(--charcoal);
+  color: var(--ivory);
+  padding: 0.7rem 1rem;
+  transition: transform 180ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.display-font {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.bengali-font {
+  font-family: var(--font-bengali), var(--font-body), sans-serif;
+}
+
+.texture {
+  background-image:
+    linear-gradient(135deg, rgb(159 31 36 / 8%) 25%, transparent 25%),
+    linear-gradient(225deg, rgb(36 88 74 / 6%) 25%, transparent 25%),
+    linear-gradient(45deg, rgb(159 31 36 / 6%) 25%, transparent 25%),
+    linear-gradient(315deg, rgb(36 88 74 / 5%) 25%, transparent 25%);
+  background-position: 18px 0, 18px 0, 0 0, 0 0;
+  background-size: 36px 36px;
+}
+
+.alpana-ring {
+  position: absolute;
+  inset: auto -4rem -4rem auto;
+  width: 18rem;
+  aspect-ratio: 1;
+  border: 1px solid rgb(159 31 36 / 20%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.alpana-ring::before,
+.alpana-ring::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px dashed rgb(36 88 74 / 22%);
+  border-radius: 50%;
+}
+
+.alpana-ring::after {
+  inset: 28%;
+  border-color: rgb(215 154 43 / 34%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
