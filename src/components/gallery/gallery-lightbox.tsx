@@ -9,7 +9,20 @@ import { getKeyboardLightboxAction, getNextIndex, getPreviousIndex } from "@/lib
 export function GalleryLightbox() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const lastTriggerRef = useRef<HTMLButtonElement | null>(null);
   const activeItem = activeIndex === null ? null : galleryItems[activeIndex];
+
+  function openLightbox(index: number, trigger: HTMLButtonElement) {
+    lastTriggerRef.current = trigger;
+    setActiveIndex(index);
+  }
+
+  function closeLightbox() {
+    setActiveIndex(null);
+    window.requestAnimationFrame(() => {
+      lastTriggerRef.current?.focus();
+    });
+  }
 
   useEffect(() => {
     if (activeIndex === null) {
@@ -26,7 +39,7 @@ export function GalleryLightbox() {
 
       event.preventDefault();
       if (action === "close") {
-        setActiveIndex(null);
+        closeLightbox();
       }
       if (action === "next") {
         setActiveIndex((index) => getNextIndex(index ?? 0, galleryItems.length));
@@ -56,7 +69,7 @@ export function GalleryLightbox() {
             <button
               aria-label={`Open ${item.title} gallery item`}
               className="block w-full text-left"
-              onClick={() => setActiveIndex(index)}
+              onClick={(event) => openLightbox(index, event.currentTarget)}
               type="button"
             >
               <span className="relative block aspect-[3/2] overflow-hidden">
@@ -88,7 +101,7 @@ export function GalleryLightbox() {
           className="fixed inset-0 z-[80] grid place-items-center bg-[rgb(36_33_31_/_86%)] p-4 backdrop-blur-sm"
           role="dialog"
         >
-          <button aria-label="Close gallery lightbox backdrop" className="absolute inset-0 cursor-default" onClick={() => setActiveIndex(null)} type="button" />
+          <button aria-label="Close gallery lightbox backdrop" className="absolute inset-0 cursor-default" onClick={closeLightbox} type="button" />
           <div className="relative w-full max-w-5xl overflow-hidden rounded-lg border border-white/[0.18] bg-[var(--ivory)] shadow-2xl">
             <div className="flex items-center justify-between gap-3 border-b border-[var(--line)] px-4 py-3">
               <div>
@@ -100,7 +113,7 @@ export function GalleryLightbox() {
               <button
                 aria-label="Close gallery lightbox"
                 className="grid size-11 place-items-center rounded-full border border-[var(--line)] bg-white text-[var(--charcoal)]"
-                onClick={() => setActiveIndex(null)}
+                onClick={closeLightbox}
                 ref={closeButtonRef}
                 type="button"
               >

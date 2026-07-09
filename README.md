@@ -75,3 +75,8 @@ PDF source files were not present in this working checkout. Source-level traceab
 - `docs/asset-extraction.md`
 - `docs/membership-google-form.md`
 - `docs/privacy-review.md`
+- `docs/security.md`
+- `docs/deployment-vercel.md`
+- `docs/custom-domain.md`
+- `docs/launch-checklist.md`
+- `docs/qa-audit.md`

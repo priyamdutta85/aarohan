@@ -4,18 +4,21 @@ The public membership route is permanently `/membership`. The current phase uses
 
 ## Setup Checklist
 
-1. Create or finalize the official Aarohan membership renewal Google Form.
-2. Obtain the approved public form URL from the form owner.
-3. Confirm whether the URL is a Google Forms `/forms/d/e/.../viewform` URL. The app can derive a reliable embed only for that shape.
-4. Set `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` in local `.env.local`.
-5. Run `/membership` locally and verify the direct-link CTA.
-6. Configure `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` in Vercel Preview environment variables.
-7. Configure `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` in Vercel Production environment variables.
-8. Redeploy after environment configuration changes.
-9. Test `/membership` on desktop.
-10. Test `/membership` on mobile.
-11. Test the direct-link fallback even when an embedded form appears.
-12. Preserve the `/membership` URL for future native membership functionality.
+1. Receive the approved Google Form URL.
+2. Verify public access settings.
+3. Verify whether login is required.
+4. Verify whether the form accepts the intended audience.
+5. Verify mobile usability.
+6. Test the direct link.
+7. Test embed suitability. The app can derive a reliable embed only for Google Forms `/forms/d/e/.../viewform` URLs.
+8. Set locally: `NEXT_PUBLIC_MEMBERSHIP_FORM_URL=`.
+9. Set `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` in Vercel Preview.
+10. Redeploy Preview.
+11. Test `/membership`.
+12. Set `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` in Vercel Production.
+13. Redeploy Production.
+14. Test `/membership` in Production.
+15. Preserve the same public URL: `/membership`.
 
 ## Safe Behavior
 
