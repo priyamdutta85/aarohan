@@ -6,6 +6,12 @@ export const site = {
   tagline: "সংস্কৃতি • সম্প্রীতি • সমাজ",
   location: "Hyderabad, Telangana, India",
   registration: "Registration No. 353 of 2024",
+  logo: {
+    src: "/images/aarohan/aarohan-official-logo.png",
+    alt: "Official Aarohan Cultural Society logo",
+    width: 1000,
+    height: 648,
+  },
   description:
     "Discover Aarohan Cultural Society, a vibrant Hyderabad community celebrating Bengali culture, music, literature, festivals, social impact and togetherness.",
   hero: {
@@ -14,7 +20,13 @@ export const site = {
     primaryCta: { label: "Discover Aarohan", href: "/about" },
     secondaryCta: { label: "Explore Our Journey", href: "/events" },
   },
+  approvedMembershipFormUrl: "https://forms.gle/TgA8JBG6pnLDpEpP9",
 } as const;
+
+export const socialLinks: LinkItem[] = [
+  { label: "Facebook", href: "https://www.facebook.com/groups/290288273803591/" },
+  { label: "Instagram", href: "https://www.instagram.com/aarohan_hyderabad/?hl=en" },
+];
 
 export const navItems: LinkItem[] = [
   { label: "About", href: "/about" },

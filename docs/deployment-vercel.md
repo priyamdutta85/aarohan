@@ -33,7 +33,7 @@ Required:
 
 Optional:
 
-- `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` for Google Form membership renewal.
+- `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` for Google Form membership renewal. Current approved value: `https://forms.gle/TgA8JBG6pnLDpEpP9`.
 - `NEXT_PUBLIC_CONTACT_EMAIL` for public contact email.
 - `NEXT_PUBLIC_CONTACT_ADDRESS` for approved public address text.
 

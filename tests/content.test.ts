@@ -23,4 +23,9 @@ describe("Aarohan public content", () => {
     expect(galleryItems).toHaveLength(6);
     expect(galleryItems.every((item) => item.caption.includes("Placeholder") || item.caption.includes("placeholder"))).toBe(true);
   });
+
+  it("uses the official logo and approved social/membership links", () => {
+    expect(site.logo.src).toBe("/images/aarohan/aarohan-official-logo.png");
+    expect(site.approvedMembershipFormUrl).toBe("https://forms.gle/TgA8JBG6pnLDpEpP9");
+  });
 });

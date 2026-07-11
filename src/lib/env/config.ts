@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { site } from "@/content/site";
 
 const optionalString = z
   .string()
@@ -50,7 +51,7 @@ export function parsePublicUrl(raw: string | undefined, nodeEnv = process.env.NO
 }
 
 export function getMembershipFormConfig(
-  raw = process.env.NEXT_PUBLIC_MEMBERSHIP_FORM_URL,
+  raw = process.env.NEXT_PUBLIC_MEMBERSHIP_FORM_URL ?? site.approvedMembershipFormUrl,
   nodeEnv = process.env.NODE_ENV
 ): MembershipFormConfig {
   const parsed = parsePublicUrl(raw, nodeEnv);
@@ -60,13 +61,14 @@ export function getMembershipFormConfig(
   }
 
   const { url } = parsed;
-  const isGoogleForm = url.hostname === "docs.google.com" && /^\/forms\/d\/e\/[^/]+\/viewform\/?$/.test(url.pathname);
+  const isEmbeddableGoogleForm = url.hostname === "docs.google.com" && /^\/forms\/d\/e\/[^/]+\/viewform\/?$/.test(url.pathname);
+  const isGoogleForm = isEmbeddableGoogleForm || url.hostname === "forms.gle";
 
-  if (!isGoogleForm) {
+  if (!isEmbeddableGoogleForm) {
     return {
       status: "direct",
       directUrl: url.toString(),
-      isGoogleForm: url.hostname === "docs.google.com",
+      isGoogleForm,
     };
   }
 
@@ -102,7 +104,7 @@ export function getPublicConfig() {
 
   return {
     siteUrl: data.NEXT_PUBLIC_SITE_URL,
-    membershipForm: getMembershipFormConfig(data.NEXT_PUBLIC_MEMBERSHIP_FORM_URL),
+    membershipForm: getMembershipFormConfig(data.NEXT_PUBLIC_MEMBERSHIP_FORM_URL ?? site.approvedMembershipFormUrl),
     contactEmail,
     contactAddress: data.NEXT_PUBLIC_CONTACT_ADDRESS,
     contactEmailInvalid: Boolean(email && !contactEmail),

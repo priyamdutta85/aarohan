@@ -35,7 +35,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=
 NEXT_PUBLIC_CONTACT_ADDRESS=
 ```
 
-`NEXT_PUBLIC_MEMBERSHIP_FORM_URL` is optional. When it is missing, `/membership` shows a safe availability message instead of a broken form. Do not hardcode a Google Form URL in source code.
+`NEXT_PUBLIC_MEMBERSHIP_FORM_URL` can override the centralized approved Google Form URL. The current approved membership form is `https://forms.gle/TgA8JBG6pnLDpEpP9`, which is presented as a direct link because short Google Form URLs cannot be reliably embedded.
 
 ## Scripts
 

@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { BackToTop } from "@/components/layout/back-to-top";
 import { Footer } from "@/components/layout/footer";
 import { MainNav } from "@/components/navigation/main-nav";
-import { site } from "@/content/site";
+import { site, socialLinks } from "@/content/site";
 import { siteUrl } from "@/lib/env/site-url";
 import { createMetadata } from "@/lib/seo/metadata";
 import "./globals.css";
@@ -18,6 +18,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     alternateName: site.bengaliName,
     description: site.description,
     url: siteUrl,
+    logo: new URL(site.logo.src, siteUrl).toString(),
+    sameAs: socialLinks.map((item) => item.href),
     address: {
       "@type": "PostalAddress",
       addressLocality: "Hyderabad",

@@ -3,7 +3,7 @@ import { Mail, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { ExternalLink } from "@/components/ui/external-link";
 import { SectionHeader } from "@/components/ui/section-header";
-import { site } from "@/content/site";
+import { site, socialLinks } from "@/content/site";
 import { getPublicConfig } from "@/lib/env/config";
 import { createMetadata } from "@/lib/seo/metadata";
 
@@ -49,6 +49,23 @@ export default function ContactPage() {
                   Development note: NEXT_PUBLIC_CONTACT_EMAIL is configured but is not a valid email address.
                 </p>
               ) : null}
+            </article>
+            <article className="rounded-lg border border-[var(--line)] bg-[var(--ivory)] p-6 shadow-sm">
+              <h2 className="display-font text-3xl">Social Channels</h2>
+              <p className="mt-3 leading-8 text-[var(--ink-muted)]">
+                Follow Aarohan&apos;s public community updates on the approved social channels.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                {socialLinks.map((item) => (
+                  <ExternalLink
+                    className="inline-flex min-h-11 items-center gap-2 rounded-full border border-[var(--line)] px-4 py-2 text-sm font-bold text-[var(--sindoor)] transition hover:bg-[var(--parchment)]"
+                    href={item.href}
+                    key={item.href}
+                  >
+                    {item.label}
+                  </ExternalLink>
+                ))}
+              </div>
             </article>
           </div>
         </div>

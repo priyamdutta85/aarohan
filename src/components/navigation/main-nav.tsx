@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,8 +15,16 @@ export function MainNav() {
     <header className="sticky top-0 z-50 border-b border-[rgb(234_216_196_/_80%)] bg-[rgb(255_248_237_/_88%)] backdrop-blur-xl">
       <nav aria-label="Main navigation" className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-6 lg:px-8">
         <Link aria-label="Aarohan Cultural Society home" className="flex min-w-0 items-center gap-3" href="/" onClick={() => setOpen(false)}>
-          <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[var(--sindoor)] text-lg font-bold text-white bengali-font">
-            আ
+          <span className="grid h-12 w-20 shrink-0 place-items-center overflow-hidden rounded-md bg-white p-1 shadow-sm">
+            <Image
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-contain"
+              height={site.logo.height}
+              priority
+              src={site.logo.src}
+              width={site.logo.width}
+            />
           </span>
           <span className="min-w-0">
             <span className="display-font block truncate text-lg font-semibold leading-5">{site.name}</span>
@@ -23,7 +32,7 @@ export function MainNav() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-1 lg:flex">
+        <div className="hidden items-center gap-1 xl:flex">
           {navItems.map((item) => {
             const active = pathname === item.href;
             return (
@@ -44,7 +53,7 @@ export function MainNav() {
           aria-controls="mobile-menu"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="grid size-11 place-items-center rounded-full border border-[var(--line)] bg-white text-[var(--charcoal)] lg:hidden"
+          className="grid size-11 place-items-center rounded-full border border-[var(--line)] bg-white text-[var(--charcoal)] xl:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
         >
@@ -53,7 +62,7 @@ export function MainNav() {
       </nav>
 
       <div
-        className={`lg:hidden ${open ? "block" : "hidden"}`}
+        className={`xl:hidden ${open ? "block" : "hidden"}`}
         id="mobile-menu"
       >
         <div className="border-t border-[var(--line)] bg-[var(--ivory)] px-5 py-4">

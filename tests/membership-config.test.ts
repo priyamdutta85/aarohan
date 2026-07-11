@@ -25,6 +25,15 @@ describe("membership Google Form configuration", () => {
     });
   });
 
+  it("keeps the approved forms.gle short link as a direct Google Form link", () => {
+    const result = getMembershipFormConfig("https://forms.gle/TgA8JBG6pnLDpEpP9", "production");
+    expect(result).toEqual({
+      status: "direct",
+      directUrl: "https://forms.gle/TgA8JBG6pnLDpEpP9",
+      isGoogleForm: true,
+    });
+  });
+
   it("derives an embeddable URL for reliable Google Forms URLs", () => {
     const result = getMembershipFormConfig("https://docs.google.com/forms/d/e/FORM_ID/viewform?usp=sharing", "production");
     expect(result.status).toBe("embeddable");

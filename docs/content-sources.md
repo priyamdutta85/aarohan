@@ -28,6 +28,9 @@ PDF page-level traceability is pending source-file verification. No PDF page num
 | Prompt 2 text | Pending approval | Membership route must use configurable Google Form URL via `NEXT_PUBLIC_MEMBERSHIP_FORM_URL` | `/membership`, `src/lib/env/config.ts`, `src/components/membership/membership-panel.tsx` | Current implementation architecture | No Google Form URL supplied; missing state is safe. |
 | Prompt 2 text | Pending approval | Participation pathways: Become a Member, Renew Membership, Volunteer, Perform, Collaborate, Support a Social Initiative, Partner With Us | `/join`, `src/content/participation.ts` | Current narrative | Pathways without approved forms route to safe contact or existing internal pages. |
 | Prompt 2 text | Pending Aarohan review | Privacy page principles for external membership form and Google Forms processing | `/privacy`, `src/content/privacy.ts`, `docs/privacy-review.md` | Draft policy copy | Requires Aarohan review before production publication. |
+| User-provided July 2026 update | User supplied URL | Approved Google Form short link: `https://forms.gle/TgA8JBG6pnLDpEpP9` | `/membership`, `.env.example`, `src/content/site.ts`, `src/lib/env/config.ts` | Current membership renewal link | Short URL is used as a direct-link flow; it is not embedded because short links cannot be reliably converted to an iframe URL. |
+| User-provided July 2026 update | User supplied URLs | Facebook group and Instagram profile | Footer, `/contact`, structured data `sameAs` | Current public social links | None. |
+| User-provided official logo PNG | User supplied image | Official Aarohan logo artwork | Navigation, footer, structured data logo | Current official brand asset | Web copy resized to 1000 x 648. |
 
 ## Known Conflict
 
