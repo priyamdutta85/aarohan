@@ -2,7 +2,7 @@ import type { LinkItem } from "@/types/content";
 
 export const site = {
   name: "Aarohan Cultural Society",
-  bengaliName: "আরোহণ",
+  bengaliName: "আরোহন",
   tagline: "সংস্কৃতি • সম্প্রীতি • সমাজ",
   location: "Hyderabad, Telangana, India",
   registration: "Registration No. 353 of 2024",
@@ -15,7 +15,7 @@ export const site = {
   description:
     "Discover Aarohan Cultural Society, a vibrant Hyderabad community celebrating Bengali culture, music, literature, festivals, social impact and togetherness.",
   hero: {
-    headline: "Rooted in Bengal. Rising Together.",
+    headline: "Rooted in Bengal • Connected by Culture • United in Hyderabad",
     dek: "A vibrant cultural home in Hyderabad — celebrating heritage, creativity, community and the timeless spirit of Bengal.",
     primaryCta: { label: "Discover Aarohan", href: "/about" },
     secondaryCta: { label: "Explore Our Journey", href: "/events" },
